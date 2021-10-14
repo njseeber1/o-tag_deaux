@@ -1,0 +1,24 @@
+﻿<Window x:Class="o_tag_deaux0.Error"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:o_tag_deaux0"
+        mc:Ignorable="d"
+        Title="Vantage" Height="400.656" Width="455" Icon="Vantage App Icon - Squiggle - Square.png" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="410*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle x:Name="color_box" Fill="#FF0303" HorizontalAlignment="Left" Height="55" Margin="10,25,0,0" Stroke="Black" VerticalAlignment="Top" Width="422" Stretch="UniformToFill" Grid.ColumnSpan="2"/>
+        <Label x:Name="text_box" Content="ERROR" HorizontalAlignment="Left" Margin="126.661,22,0,0" VerticalAlignment="Top" Foreground="#FFFDF9F9" FontSize="36" Grid.Column="1"/>
+        <Button x:Name="btn_continue" Content="Continue" HorizontalAlignment="Left" Margin="115,290,0,0" VerticalAlignment="Top" Width="132" Height="67" Click="btn_continue_Click" Grid.Column="1"/>
+        <Border BorderBrush="Black" Background="AliceBlue" BorderThickness="1" HorizontalAlignment="Stretch" Height="1" Margin="10,278,10,0" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+        <Border BorderBrush="Black" Background="AliceBlue" BorderThickness="1" HorizontalAlignment="Stretch" Height="1" Margin="10,95,10,0" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+        <Label Content="Error Message" HorizontalAlignment="Left" Margin="60.661,101,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Visibility="Hidden" Grid.Column="1"/>
+        <Label x:Name="error_msg" Content="asdfa" HorizontalAlignment="Center" Margin="10,101,10,99" VerticalAlignment="Center" RenderTransformOrigin="0.474,-0.041" Width="427" Height="219" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

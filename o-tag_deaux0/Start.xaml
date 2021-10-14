@@ -1,0 +1,48 @@
+﻿<Window x:Class="o_tag_deaux0.Start"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:o_tag_deaux0"
+        mc:Ignorable="d"
+        Title="Vantage O-Tag" Height="331.89" Width="580.961" WindowStartupLocation="CenterScreen" Icon="Vantage App Icon - Squiggle - Square.png">
+    <Grid Margin="0,0,2,-1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="208*"/>
+            <RowDefinition Height="211*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="377*"/>
+            <ColumnDefinition Width="153*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Room #:" HorizontalAlignment="Left" Margin="1,7,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="132" Grid.ColumnSpan="2"/>
+        <Label Content="Bands Needed" HorizontalAlignment="Left" Margin="1,45,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="87" Visibility="Hidden" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="reservationid" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="51,12,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" IsReadOnly="True" RenderTransformOrigin="1.051,0.496" IsTabStop="False" BorderThickness="0"/>
+        <TextBox x:Name="count_bands" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="58,49,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="35" RenderTransformOrigin="1.055,0.841" IsReadOnly="True" IsTabStop="False" BorderBrush="#00ABADB3" Visibility="Hidden"/>
+        <DatePicker x:Name="cal_from" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="277,40,-109,0" SelectedDateFormat="Long" Width="362" LostFocus="on_fromChange" Height="24" Grid.ColumnSpan="2" IsTodayHighlighted="False" Foreground="Black" Visibility="Hidden" Grid.Row="1"/>
+        <DatePicker x:Name="cal_to" Grid.Column="2" HorizontalAlignment="Left" Margin="277,66,-109,0" SelectedDateFormat="Long" VerticalAlignment="Top" Width="362" LostFocus="cal_ValueChanged" RenderTransformOrigin="0.818,-1.333" Grid.Row="1" Height="24" Grid.ColumnSpan="2" IsTodayHighlighted="False" Visibility="Hidden"/>
+        <Border BorderBrush="Black" Background="AliceBlue" BorderThickness="1" HorizontalAlignment="Stretch" Height="1" Margin="1,76,12,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="3" />
+
+        <ScrollViewer x:Name="scroller" HorizontalAlignment="Left" Height="192" Margin="1,93,0,0" VerticalAlignment="Top" Width="201" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="scroller_panel" Width="198"/>
+        </ScrollViewer>
+        <Button x:Name="btn_abort" Content="Abort" HorizontalAlignment="Left" Margin="201,69,0,0" VerticalAlignment="Top" Width="132" Height="41" Grid.Row="1" Grid.Column="2" Click="btn_abort_Click" Foreground="#FFFBEFEF" FontSize="24" IsCancel="True" Background="#FFFF0606"/>
+        <Button x:Name="btn_activate" Content="Activate Room Keys" Grid.Column="2" HorizontalAlignment="Left" Margin="201,93,0,0" VerticalAlignment="Top"  Width="309" Height="107" Click="btn_activate_Click" Grid.RowSpan="2" Grid.ColumnSpan="2" BorderThickness="2,2,3,3" BorderBrush="#BF3C3C3C" Foreground="White" FontSize="30" FontFamily="Segoe UI Semibold" IsDefault="True" Background="#FFA47DFF"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" HorizontalAlignment="Left" Height="205" Margin="184,89,0,0" VerticalAlignment="Top" Width="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="nights" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="50,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="49" IsReadOnly="True" IsTabStop="False" BorderBrush="#00ABADB3"/>
+        <Label Content="Nights:" Grid.Column="1" HorizontalAlignment="Left" Margin="2,46,0,0" VerticalAlignment="Top" Height="26" Width="72" Grid.ColumnSpan="2"/>
+        <Label Content="Check In:" Grid.Column="2" HorizontalAlignment="Left" Margin="209,28,0,0" VerticalAlignment="Top" Height="26" Width="76"/>
+        <Label Content="Check Out:" Grid.Column="2" HorizontalAlignment="Left" Margin="209,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.498,3.298" Height="26" Width="76"/>
+        <Label x:Name="label_indate" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="300,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.2,0.631" Grid.ColumnSpan="2" Width="218" Height="26"/>
+        <Label x:Name="label_outdate" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="300,49,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.271,-0.507" Grid.ColumnSpan="2" Width="218" Height="26"/>
+        <Label Content="Guest Count:" Grid.Column="1" HorizontalAlignment="Left" Margin="2,27,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="79" Height="26"/>
+        <Label x:Name="label_guest_count" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="48,27,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label Content="Primary Name:" Grid.Column="2" HorizontalAlignment="Left" Margin="209,7,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+        <Label x:Name="label_primary" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="300,7,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="206" Height="26"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="2" Margin="0,150,-72,0" Grid.Row="1" VerticalAlignment="Top" Width="643" Grid.ColumnSpan="4"/>
+        <Button Content="Clear Existing Keys" Grid.Column="3" HorizontalAlignment="Left" Margin="4,69,0,0" VerticalAlignment="Top" Width="129" Grid.Row="1" BorderBrush="Black" Height="41" Foreground="#FFFBF9F9" Focusable="False" FontSize="14" Click="Button_Click" Background="#FF1C3EB2"/>
+
+    </Grid>
+</Window>
